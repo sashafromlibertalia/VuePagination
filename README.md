@@ -1,24 +1,14 @@
-# vuepagination
+<div align="center">
+<h1>Vue pagination</h1>
+<h4>🍉 Pagination component for Vue.js</h4>
 
-## Project setup
-```
-npm install
-```
+<p align="center">
+<a href="https://www.buymeacoffee.com/fromlibertalia"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black"></a>
+</p>
+</div>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Installation
 
-### Compiles and minifies for production
+```bash
+npm i vue-pagination
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
