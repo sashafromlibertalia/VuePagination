@@ -1,11 +1,11 @@
 <template>
     <div class='pagination-wrapper' v-if='allPages.length > 1'>
-        <template v-for='(page, index) of allPages'>
+        <div v-for='(page, index) of allPages' :key='index'>
             <span :key='index'
                   :id='handleId(page, index)'
                   :class='{"active-page": page === thisPage, "action-btn": isActionButton(index)}'
                   @click='changePage'>{{ page }}</span>
-        </template>
+        </div>
     </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
             required: true,
             default: 1,
             validator(value) {
-                typeof value === 'number' && value > 0
+                return typeof value === 'number' && value > 0
             }
         },
     },
@@ -34,7 +34,7 @@ export default {
     },
     computed: {
         pagination() {
-            return [...Array.from({ length: this.pagesAmount }, (_, index) => index + 1)]
+            return [...Array.from({length: this.pagesAmount}, (_, index) => index + 1)]
         },
         allPages() {
             if (this.pagesAmount > MAXIMUM_PAGE_DISPLAY) {
@@ -65,25 +65,23 @@ export default {
     },
     methods: {
         handleId(page, index) {
-            if (this.pagination.length > this.maxPagesDisplay) {
-                if (index === 0) {
-                    if (!this.allPages.includes('Prev')) {
-                        return page
-                    } else {
-                        return 0
-                    }
-                } else if (index === this.allPages.length - 1) {
-                    if (!this.allPages.includes('Next')) {
-                        return page
-                    } else {
-                        return this.lastIndex
-                    }
-                } else {
+            if (this.pagination.length <= this.maxPages) return page
+
+            if (!index) {
+                if (!this.allPages.includes('Prev')) {
                     return page
                 }
-            } else {
-                return page
+
+                return 0
+            } else if (index === this.allPages.length - 1) {
+                if (!this.allPages.includes('Next')) {
+                    return page
+                }
+
+                return this.lastIndex
             }
+
+            return page
         },
         isActionButton(index) {
             if (this.pagination.length > this.maxPagesDisplay) {
@@ -132,48 +130,49 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-$brand3: #18214D;
-$animation__template: cubic-bezier(0.4, 0.01, 0.165, 0.99);
-$light_gray: #F2F2F2;
-$brand2: #005AE8;
+<style scoped>
+:root {
+    --brand2: #005AE8;
+    --brand3: #18214D;
+    --animation-template: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    --light-gray: #F2F2F2;
+}
 
 .pagination-wrapper {
     margin-top: 2rem;
     display: flex;
+}
 
-    & span {
-        padding: 16px 20px;
-        cursor: pointer;
-        font-size: 1.1rem;
-        color: $brand3;
-        transition: all 200ms $animation__template;
+.pagination-wrapper span {
+    padding: 16px 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--brand3);
+    transition: all 200ms var(--animation-template);
 
-        &:first-child {
-            border-radius: 8px 0 0 8px;
-        }
-
-        &:last-child {
-            border-radius: 0 8px 8px 0;
-        }
-
-        &:hover {
-            background: $light_gray;
-        }
-    }
-
-    .action-btn {
-        user-select: none;
-    }
-
-    .active-page {
-        background: $brand2;
-        color: white;
-
-        &:hover {
-            background: $brand2;
-        }
+    &:hover {
+        background: var(--light-gray);
     }
 }
 
+.pagination-wrapper span:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.pagination-wrapper span:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.action-btn {
+    user-select: none;
+}
+
+.active-page {
+    background: var(--brand2);
+    color: white;
+}
+
+.active-page:hover {
+    background: var(--brand2);
+}
 </style>

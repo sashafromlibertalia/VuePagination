@@ -1,25 +1,13 @@
-import Pagination from "@/Pagination";
+import Pagination from "./Pagination";
 
-const install = (Vue) => {
-    if (install.installed) return;
-    install.installed = true;
-    Vue.component("v-pagination", Pagination);
-}
-
-const plugin = {
-    install
+const PaginationComponent = {
+    install(Vue) {
+        Vue.component("v-pagination", Pagination);
+    }
 };
 
-let GlobalVue = null;
-if (typeof window !== "undefined") {
-    GlobalVue = window.Vue;
-} else if (typeof global !== "undefined") {
-    GlobalVue = global.vue;
-}
-if (GlobalVue) {
-    GlobalVue.use(plugin);
+if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.use(PaginationComponent);
 }
 
-Pagination.install = install;
-
-export default Pagination;
+export default PaginationComponent;

@@ -12,3 +12,21 @@
 ```bash
 npm i vue-pagination
 ```
+
+## Usage
+
+```vue
+<template>
+    <v-pagination pages-amount="5" @change="handleChange"/>
+</template>
+
+<script>
+export default {
+    methods: {
+        handleChange() {
+            
+        }
+    }
+}
+</script>
+```

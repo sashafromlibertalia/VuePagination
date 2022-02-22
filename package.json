@@ -1,66 +1,73 @@
 {
-  "name": "vue-pagination",
-  "version": "1.0.0",
-  "private": true,
-  "author": "sashafromlibertalia",
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "webpack --config webpack.config.js",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-router": "^3.5.1"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.15",
-    "@vue/cli-plugin-eslint": "~4.5.15",
-    "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-service": "~4.5.15",
-    "babel-core": "^6.26.3",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.3",
-    "babel-preset-env": "^1.7.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "file-loader": "^6.2.0",
-    "node-sass": "^7.0.1",
-    "vue-loader": "^17.0.0",
-    "vue-template-compiler": "^2.6.14",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
+    "name": "vue-pagination",
+    "version": "1.0.0",
+    "private": false,
+    "author": {
+        "name": "sashafromlibertalia",
+        "email": "sashafromlibertalia@gmail.com"
     },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+    "scripts": {
+        "build": "vue-cli-service build",
+        "build-library" : "vue-cli-service build --target lib --name vue-pagination ./src/index.js"
+    },
+    "dependencies": {
+        "core-js": "^3.6.5",
+        "vue": "^3.2.29",
+        "vue-router": "^3.5.1"
+    },
+    "publishConfig": {
+        "@sashafromlibertalia:registry": "https://npm.pkg.github.com"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.15",
+        "@vue/cli-plugin-eslint": "~4.5.15",
+        "@vue/cli-plugin-router": "~5.0.0",
+        "@vue/cli-service": "~4.5.15",
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.2.3",
+        "babel-preset-env": "^1.7.0",
+        "cross-env": "^7.0.3",
+        "css-loader": "^6.6.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "file-loader": "^6.2.0",
+        "node-sass": "^7.0.1",
+        "style-loader": "^3.3.1",
+        "vue-loader": "^17.0.0",
+        "vue-template-compiler": "^2.6.14"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {}
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
     ],
-    "parserOptions": {
-      "parser": "babel-eslint"
+    "description": "<div align=\"center\"> <h1>Vue pagination</h1> <h4>🍉 Pagination component for Vue.js</h4>",
+    "main": ".dist/vue-pagination.common.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sashafromlibertalia/VuePagination.git"
     },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "description": "<div align=\"center\"> <h1>Vue pagination</h1> <h4>🍉 Pagination component for Vue.js</h4>",
-  "main": "babel.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sashafromlibertalia/VuePagination.git"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sashafromlibertalia/VuePagination/issues"
-  },
-  "homepage": "https://github.com/sashafromlibertalia/VuePagination#readme"
+    "files": ["dist/*"],
+    "license": "MIT",
+    "keywords": ["vue", "vuejs", "component", "pagination", "vue-component"],
+    "bugs": {
+        "url": "https://github.com/sashafromlibertalia/VuePagination/issues"
+    },
+    "homepage": "https://github.com/sashafromlibertalia/VuePagination#readme"
 }
