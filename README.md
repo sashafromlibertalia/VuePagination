@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Vuepage</h1>
+<h1>Vuepagify</h1>
 <h4>🍉 Pagination component for Vue.js</h4>
 
 <p align="center">

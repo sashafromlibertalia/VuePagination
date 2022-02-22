@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Vuepage',
+    title: 'Vuepagify',
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
