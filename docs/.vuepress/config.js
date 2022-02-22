@@ -1,5 +1,6 @@
 module.exports = {
     title: 'Vuepagify',
+    base: '/vuepagify/',
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },

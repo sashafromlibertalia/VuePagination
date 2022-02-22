@@ -14,7 +14,7 @@ npm i vue-pagination
 ```
 
 ## Docs
-Documentation for this component can be found [here]()
+Documentation for this component can be found [here](https://sashafromlibertalia.github.io/vuepagify/)
 
 ## License
 This project is MIT licensed.
