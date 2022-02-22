@@ -4,7 +4,7 @@ module.exports = {
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Details', link: '/details/' },
-            { text: 'GitHub', link: 'https://github.com/sashafromlibertalia/VuePagination' }
+            { text: 'GitHub', link: 'https://github.com/sashafromlibertalia/vuepagify' }
         ]
     }
 }
