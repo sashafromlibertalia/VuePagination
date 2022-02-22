@@ -61,11 +61,11 @@
         "last 2 versions",
         "not dead"
     ],
-    "description": "<div align=\"center\"> <h1>vuepagify</h1> <h4>🍉 Pagination component for Vue.js</h4>",
+    "description": "Pagination component for Vue.js",
     "main": ".dist/vue-pagination.common.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sashafromlibertalia/VuePagination.git"
+        "url": "git+https://github.com/sashafromlibertalia/vuepagify.git"
     },
     "files": [
         "dist/*"
@@ -79,7 +79,7 @@
         "vue-component"
     ],
     "bugs": {
-        "url": "https://github.com/sashafromlibertalia/VuePagination/issues"
+        "url": "https://github.com/sashafromlibertalia/vuepagify/issues"
     },
-    "homepage": "https://github.com/sashafromlibertalia/VuePagination#readme"
+    "homepage": "https://github.com/sashafromlibertalia/vuepagify#readme"
 }
