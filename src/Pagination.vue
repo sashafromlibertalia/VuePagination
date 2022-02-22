@@ -65,7 +65,7 @@ export default {
     },
     methods: {
         handleId(page, index) {
-            if (this.pagination.length <= this.maxPages) return page
+            if (this.pagination.length <= this.maxPagesDisplay) return page
 
             if (!index) {
                 if (!this.allPages.includes('Prev')) {
@@ -117,7 +117,7 @@ export default {
         },
     },
     updated() {
-        this.selectedPage = this.$route.query.page
+        this.selectedPage = this.$route.query.page || 1
     },
     watch: {
         selectedPage: {

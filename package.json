@@ -8,11 +8,14 @@
     },
     "scripts": {
         "build": "vue-cli-service build",
-        "build-library" : "vue-cli-service build --target lib --name vue-pagination ./src/index.js"
+        "build-library": "vue-cli-service build --target lib --name vue-pagination ./src/index.js",
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs"
     },
     "dependencies": {
+        "@vue/compiler-sfc": "^3.2.31",
         "core-js": "^3.6.5",
-        "vue": "^3.2.29",
+        "vue": "^2.6.x",
         "vue-router": "^3.5.1"
     },
     "publishConfig": {
@@ -36,7 +39,9 @@
         "node-sass": "^7.0.1",
         "style-loader": "^3.3.1",
         "vue-loader": "^17.0.0",
-        "vue-template-compiler": "^2.6.14"
+        "vue-template-compiler": "^2.6.14",
+        "vuepress": "^1.9.7",
+        "webpack": "^4.46.0"
     },
     "eslintConfig": {
         "root": true,
@@ -63,9 +68,17 @@
         "type": "git",
         "url": "git+https://github.com/sashafromlibertalia/VuePagination.git"
     },
-    "files": ["dist/*"],
+    "files": [
+        "dist/*"
+    ],
     "license": "MIT",
-    "keywords": ["vue", "vuejs", "component", "pagination", "vue-component"],
+    "keywords": [
+        "vue",
+        "vuejs",
+        "component",
+        "pagination",
+        "vue-component"
+    ],
     "bugs": {
         "url": "https://github.com/sashafromlibertalia/VuePagination/issues"
     },

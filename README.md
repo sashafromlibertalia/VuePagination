@@ -13,20 +13,8 @@
 npm i vue-pagination
 ```
 
-## Usage
+## Docs
+Documentation for this component can be found [here]()
 
-```vue
-<template>
-    <v-pagination pages-amount="5" @change="handleChange"/>
-</template>
-
-<script>
-export default {
-    methods: {
-        handleChange() {
-            
-        }
-    }
-}
-</script>
-```
+## License
+This project is MIT licensed.
