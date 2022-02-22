@@ -7,8 +7,7 @@
         "email": "sashafromlibertalia@gmail.com"
     },
     "scripts": {
-        "build": "vue-cli-service build",
-        "build-library": "vue-cli-service build --target lib --name vue-pagination ./src/index.js",
+        "build": "vue-cli-service build --target lib --name vue-pagination ./src/index.js",
         "docs:dev": "vuepress dev docs",
         "docs:build": "vuepress build docs"
     },
