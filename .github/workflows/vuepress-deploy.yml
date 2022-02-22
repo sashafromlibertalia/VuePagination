@@ -14,4 +14,4 @@ jobs:
           TARGET_REPO: sashafromlibertalia/Vuepagify
           TARGET_BRANCH: main
           BUILD_SCRIPT: npm i && npm run docs:build
-          BUILD_DIR: docs/.vuepress/dist
+          BUILD_DIR: ./docs/.vuepress/dist
