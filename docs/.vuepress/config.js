@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Vue pagination',
+    title: 'Vuepage',
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },

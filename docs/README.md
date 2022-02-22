@@ -1,12 +1,12 @@
 <div align="center">
-<h1>Vue pagination</h1>
+<h1>Vuepage</h1>
 <h4>🍉 Pagination component for Vue.js</h4>
 </div>
 
 ## Installation
 
 ```bash
-npm i vue-pagination
+npm i vuepage
 ```
 
 ## Usage
@@ -24,7 +24,6 @@ Query `Page` is used for our component. You can't change page without replacing 
 export default {
     methods: {
         async handlePaging(page) {
-            // MUST
             await this.$router.replace({
                 name: this.$route.name,
                 query: { page: page },

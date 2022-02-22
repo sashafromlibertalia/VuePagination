@@ -1,5 +1,5 @@
 {
-    "name": "vue-pagination",
+    "name": "vuepage",
     "version": "1.0.0",
     "private": false,
     "author": {
@@ -62,7 +62,7 @@
         "last 2 versions",
         "not dead"
     ],
-    "description": "<div align=\"center\"> <h1>Vue pagination</h1> <h4>🍉 Pagination component for Vue.js</h4>",
+    "description": "<div align=\"center\"> <h1>Vuepage</h1> <h4>🍉 Pagination component for Vue.js</h4>",
     "main": ".dist/vue-pagination.common.js",
     "repository": {
         "type": "git",
