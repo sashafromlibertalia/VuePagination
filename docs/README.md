@@ -10,10 +10,12 @@ npm i vuepagify
 ```
 
 ## Usage
-This library is built with [vue-router](https://router.vuejs.org). It's strongly connected to the current URL:
-> https://website.com/some/url?page=1
+First, you need to register component globally
+```js
+import PaginationComponent from "vuepagify"
 
-Query `Page` is used for our component. You can't change page without replacing current query data:
+Vue.use(PaginationComponent)
+```
 
 ```vue
 <template>
@@ -35,5 +37,8 @@ export default {
 }
 </script>
 ```
+This library is built with [vue-router](https://router.vuejs.org). It's strongly connected to the current URL:
+> https://website.com/some/url?page=1
 
+Query `Page` is used for our component. You can't change page without replacing current query data.
 It would be a good idea to create special `helper.js` file for reuse of router replacer.
