@@ -7,5 +7,10 @@ module.exports = {
             { text: 'Details', link: '/details/' },
             { text: 'GitHub', link: 'https://github.com/sashafromlibertalia/vuepagify' }
         ]
+    },
+    markdown: {
+        code: {
+            lineNumbers: true
+        }
     }
 }
