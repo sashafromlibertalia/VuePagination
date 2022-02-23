@@ -3,7 +3,7 @@
 <h4>🍉 Pagination component for Vue.js</h4>
 
 <p align="center">
-  <img src="https://badge.fury.io/js/vuepagify.svg" alt="npm version" />
+  <img src="https://img.shields.io/npm/v/vuepagify" alt="npm version" />
 <img src="https://img.shields.io/npm/l/vuepagify">  
 <img src="https://github.com/sashafromlibertalia/vuepagify/actions/workflows/node.js.yml/badge.svg">
 <img src="https://img.shields.io/npm/dm/vuepagify">
