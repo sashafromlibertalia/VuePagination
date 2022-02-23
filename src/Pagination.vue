@@ -1,11 +1,12 @@
 <template>
-    <div class='pagination-wrapper' v-if='allPages.length > 1'>
-        <div v-for='(page, index) of allPages' :key='index'>
+    <div class='pagination-wrapper' v-if='allPages.length > 1' key="pagination-wrapper">
+        <template v-for='(page, index) of allPages'>
             <span :key='index'
+                  class='span'
                   :id='handleId(page, index)'
                   :class='{"active-page": page === thisPage, "action-btn": isActionButton(index)}'
                   @click='changePage'>{{ page }}</span>
-        </div>
+        </template>
     </div>
 </template>
 
@@ -54,7 +55,7 @@ export default {
             return Math.pow(this.allPages.length, 2)
         },
         thisPage() {
-            return parseInt(`${this.$route.query.page}`, 10)
+            return this.selectedPage
         },
         trimStart() {
             return (this.subPage - 1) * MAXIMUM_PAGE_DISPLAY
@@ -143,33 +144,34 @@ export default {
     display: flex;
 }
 
-.pagination-wrapper span {
+.span {
     padding: 16px 20px;
     cursor: pointer;
     font-size: 1.1rem;
     color: var(--brand3);
     transition: all 200ms var(--animation-template);
-
-    &:hover {
-        background: var(--light-gray);
-    }
 }
 
-.pagination-wrapper span:first-child {
+.span:hover {
+    background: var(--light-gray);
+}
+
+.span:first-child {
     border-radius: 8px 0 0 8px;
 }
 
-.pagination-wrapper span:last-child {
+.span:last-child {
     border-radius: 0 8px 8px 0;
-}
-
-.action-btn {
-    user-select: none;
 }
 
 .active-page {
     background: var(--brand2);
     color: white;
+}
+
+
+.action-btn {
+    user-select: none;
 }
 
 .active-page:hover {
