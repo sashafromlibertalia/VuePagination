@@ -59,7 +59,7 @@
         "not dead"
     ],
     "description": "Pagination component for Vue.js",
-    "main": ".dist/vuepagify.common.js",
+    "main": "dist/vuepagify.common.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/sashafromlibertalia/vuepagify.git"
