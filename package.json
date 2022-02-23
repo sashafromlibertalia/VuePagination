@@ -7,7 +7,7 @@
         "email": "sashafromlibertalia@gmail.com"
     },
     "scripts": {
-        "build": "vue-cli-service build --target lib --name vue-pagination ./src/index.js",
+        "build": "vue-cli-service build --target lib --name vuepagify ./src/index.js",
         "docs:dev": "vuepress dev docs",
         "docs:build": "vuepress build docs"
     },
@@ -59,7 +59,7 @@
         "not dead"
     ],
     "description": "Pagination component for Vue.js",
-    "main": ".dist/vue-pagination.common.js",
+    "main": ".dist/vuepagify.common.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/sashafromlibertalia/vuepagify.git"

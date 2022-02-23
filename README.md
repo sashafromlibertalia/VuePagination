@@ -15,7 +15,7 @@
 ## Installation
 
 ```bash
-npm i vue-pagination
+npm i vuepagify
 ```
 
 ## Docs
